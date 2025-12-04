@@ -65,6 +65,9 @@ public class First_Test {
 
 		// 4) close browser
 		driver.quit();
+		
+		// seleniumbasic 
+		// seleniumbasic
 		// driver.close();
 	}
 
