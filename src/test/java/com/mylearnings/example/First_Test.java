@@ -54,7 +54,7 @@ public class First_Test {
 
 		// 2) Open URL https://www.selenium.dev/
 		driver.get("https://www.selenium.dev/");
-
+		
 		// 3) Validate title should be "Selenium"
 		String actualTitle = driver.getTitle();
 		if (actualTitle.equals("Selenium")) {
