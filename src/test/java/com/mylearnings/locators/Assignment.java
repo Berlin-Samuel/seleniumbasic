@@ -1,8 +1,8 @@
 /**
- * FileName: FirstTestCase.java
+ * FileName: Assignment.java
  * Author   : Admin
  * Version  : 1.0
- * Date     : 04-Dec-2025
+ * Date     : 05-Dec-2025
  * 
  * This file is part of a personal learning project.
  * 
@@ -24,50 +24,35 @@
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
  * 
  * REVISION     DATE           NAME         DESCRIPTION  
- * 1.0          04-Dec-2025        Berlin        Initial Code  
+ * 1.0          05-Dec-2025        Berlin        Initial Code  
  * 
  * @author Berlin
  * @version 1.0
- * @since 04-Dec-2025
+ * @since 05-Dec-2025
  */
-package com.mylearnings.example;
+package com.mylearnings.locators;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-/*
- * Test Case:
- * -----------
- * 1) Launch Browser
- * 2) Open URL https://www.selenium.dev/
- * 3) Validate title should be "Selenium"
- * 4) Close Browser
- * -----------
- * */
-
-public class First_Test {
+public class Assignment {
 	public static void main(String[] args) {
-
-		// 1) Launch Browser
-		// ChromeDriver driver= new ChromeDriver();
 		WebDriver driver = new ChromeDriver();
-
-		// 2) Open URL https://www.selenium.dev/
-		driver.get("https://www.selenium.dev/");
-		
-		// 3) Validate title should be "Selenium"
-		String actualTitle = driver.getTitle();
-		if (actualTitle.equals("Selenium")) {
-			System.out.println("Test Passed");
-		} else {
-			System.out.println("Test Failed");
-		}
-
-		// 4) close browser
-		driver.quit();
-		// seleniumbasic 
-		// seleniumbasic
-		// driver.close();
+		driver.manage().window().maximize();
+		driver.get("https://demoblaze.com/index.html");
+		System.out.println("======================");
+		List<WebElement> links = driver.findElements(By.tagName("a"));
+		System.out.println("Total no of links " + links);
+		System.out.println("======================");
+		List<WebElement> img = driver.findElements(By.tagName("img"));
+		System.out.println("Total no of image Tags " + img);
+		System.out.println("======================");
+		driver.findElement(By.linkText("Monitors")).click();
+		driver.findElement(By.partialLinkText("ptop")).click();
 	}
 
 }
