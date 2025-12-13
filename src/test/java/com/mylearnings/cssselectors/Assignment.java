@@ -1,5 +1,5 @@
 /**
- * FileName: Example.java
+ * FileName: Tag_Class.java
  * Author   : Admin
  * Version  : 1.0
  * Date     : 05-Dec-2025
@@ -32,6 +32,21 @@
  */
 package com.mylearnings.cssselectors;
 
-public class Example {
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+public class Assignment {
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://release.chainsys.com/appplatform/core/userlogin/logout");
+		driver.findElement(By.id("userName")).sendKeys("berlinsamuel.r@appdataqa.com");
+		driver.findElement(By.id("password")).sendKeys("Welcome#1");
+		driver.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.cssSelector("#cs_switchmenu")).click();
+		// driver.findElement(By.cssSelector(".cs-inline cs-lmar")).click();
+		// driver.findElement(By.className("cs-mg-app-img cs-lmar cs-pad")).click();
+
+	}
 }
