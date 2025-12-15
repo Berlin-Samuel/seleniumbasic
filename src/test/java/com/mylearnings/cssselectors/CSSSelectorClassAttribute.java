@@ -39,7 +39,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CSSAttributeSelector {
+public class CSSSelectorClassAttribute {
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -47,11 +47,10 @@ public class CSSAttributeSelector {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		WebElement user = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='username']")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oxd-input[name='username']")));
 		user.sendKeys("Admin");
-		// driver.findElement(By.cssSelector("input[name='username']")).sendKeys("Admin");
-		driver.findElement(By.cssSelector("[type=\"password\"]")).sendKeys("admin123");
-		driver.findElement(By.cssSelector("[type=\"submit\"]")).click();
+		driver.findElement(By.cssSelector(".oxd-input[type='password']")).sendKeys("admin123");
+		driver.findElement(By.cssSelector(".oxd-button[type='submit']")).click();
 	}
 
 }
