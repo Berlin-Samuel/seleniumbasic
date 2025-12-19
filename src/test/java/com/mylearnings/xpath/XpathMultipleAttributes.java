@@ -1,13 +1,14 @@
 /**
- * FileName: CSSAttributeSelector.java
+ * FileName: XpathMultipleAttributes.java
  * Author   : Admin
  * Version  : 1.0
- * Date     : 11-Dec-2025
+ * Date     : 15-Dec-2025
  * 
  * This file is part of a personal learning project.
  * 
  * Licensed under the MIT License.
- *   Berlin Samuel.
+ * 
+ * Copyright (c) 2025 Berlin Samuel.
  * Permission is hereby granted, free of charge, to any person obtaining a copy  
  * of this software and associated documentation files (the "Software"), to deal  
  * in the Software without restriction, including without limitation the rights  
@@ -23,13 +24,13 @@
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
  * 
  * REVISION     DATE           NAME         DESCRIPTION  
- * 1.0          11-Dec-2025        Berlin        Initial Code  
+ * 1.0          15-Dec-2025        Berlin        Initial Code  
  * 
  * @author Berlin
  * @version 1.0
- * @since 11-Dec-2025
+ * @since 15-Dec-2025
  */
-package com.mylearnings.cssselectors;
+package com.mylearnings.xpath;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
@@ -39,18 +40,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CSSSelectorClassAttribute {
+public class XpathMultipleAttributes {
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		WebElement user = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oxd-input[name='username']")));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+		WebElement user = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//input[@placeholder='Username'][@name='username']")));
 		user.sendKeys("Admin");
-		driver.findElement(By.cssSelector(".oxd-input[type='password']")).sendKeys("admin123");
-		driver.findElement(By.cssSelector(".oxd-button[type='submit']")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Password'][@type='password']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
 	}
 
 }
+  
