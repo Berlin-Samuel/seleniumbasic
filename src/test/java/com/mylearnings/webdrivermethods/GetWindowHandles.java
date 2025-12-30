@@ -68,5 +68,6 @@ public class GetWindowHandles {
 				System.out.println(driver.getCurrentUrl());
 			}
 		}
+		driver.quit();
 	}
 }
