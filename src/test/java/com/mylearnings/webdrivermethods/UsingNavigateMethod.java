@@ -1,8 +1,8 @@
 /**
- * FileName: ExplicitWait.java
+ * FileName: NavigationalMethods.java
  * Author   : Admin
  * Version  : 1.0
- * Date     : 23-Dec-2025
+ * Date     : 29-Dec-2025
  * 
  * This file is part of a personal learning project.
  * 
@@ -24,30 +24,37 @@
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
  * 
  * REVISION     DATE           NAME         DESCRIPTION  
- * 1.0          23-Dec-2025        Berlin        Initial Code  
+ * 1.0          29-Dec-2025        Berlin        Initial Code  
  * 
  * @author Berlin
  * @version 1.0
- * @since 23-Dec-2025
+ * @since 29-Dec-2025
  */
-package com.mylearnings.waits;
+package com.mylearnings.webdrivermethods;
 
-import java.time.Duration;
-import org.openqa.selenium.By;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ImplicitWait {
-	public static void main(String[] args) {
+public class UsingNavigateMethod {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
-		System.out.println(driver.findElement(By.xpath("//input[@name='username']")).getAttribute("username"));
-		driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("admin123");
-		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
-		driver.quit  ();
+		try {
+			URL checkNewURL = new URL("https://www.saucedemo.com/");
+			driver.navigate().to(checkNewURL);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} finally {
+			driver.switchTo().newWindow(WindowType.TAB);
+			driver.get("https://www.amazon.in/");
+			System.out.println("=====================");
+			Thread.sleep(10000);
+			driver.quit();
+		}
 	}
 
 }

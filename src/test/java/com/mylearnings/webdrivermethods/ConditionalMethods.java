@@ -46,9 +46,6 @@ public class ConditionalMethods {
 		WebElement logo = driver.findElement(By.xpath("//img[@class='logo']"));
 		System.out.println(logo.isDisplayed());
 		System.out.println("======================");
-		driver.findElement(By.xpath(""));
-
-		// is selected
-
+		driver.quit();
 	}
 }

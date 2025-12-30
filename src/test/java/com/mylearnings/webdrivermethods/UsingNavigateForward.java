@@ -1,8 +1,8 @@
 /**
- * FileName: ExplicitWait.java
+ * FileName: UsingNavigateForward.java
  * Author   : Admin
  * Version  : 1.0
- * Date     : 23-Dec-2025
+ * Date     : 30-Dec-2025
  * 
  * This file is part of a personal learning project.
  * 
@@ -24,30 +24,35 @@
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
  * 
  * REVISION     DATE           NAME         DESCRIPTION  
- * 1.0          23-Dec-2025        Berlin        Initial Code  
+ * 1.0          30-Dec-2025        Berlin        Initial Code  
  * 
  * @author Berlin
  * @version 1.0
- * @since 23-Dec-2025
+ * @since 30-Dec-2025
  */
-package com.mylearnings.waits;
+package com.mylearnings.webdrivermethods;
 
-import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ImplicitWait {
-	public static void main(String[] args) {
+public class UsingNavigateForward {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
-		System.out.println(driver.findElement(By.xpath("//input[@name='username']")).getAttribute("username"));
-		driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("admin123");
-		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
-		driver.quit  ();
+		driver.get("https://www.saucedemo.com");
+		Thread.sleep(3000);
+		driver.navigate().refresh();
+		Thread.sleep(3000);
+		driver.get("https://rewardz.sbi.bank.in/user/login");
+		Thread.sleep(7000);
+		driver.findElement(By.partialLinkText("Overview")).click();
+		Thread.sleep(5000);
+		driver.navigate().back();
+		Thread.sleep(5000);
+		driver.navigate().forward();
+		Thread.sleep(5000);
+		driver.quit();
 	}
 
 }

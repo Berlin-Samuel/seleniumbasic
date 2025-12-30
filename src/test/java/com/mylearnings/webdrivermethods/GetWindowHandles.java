@@ -1,8 +1,8 @@
 /**
- * FileName: ExplicitWait.java
+ * FileName: GetWindowHandles.java
  * Author   : Admin
  * Version  : 1.0
- * Date     : 23-Dec-2025
+ * Date     : 30-Dec-2025
  * 
  * This file is part of a personal learning project.
  * 
@@ -24,30 +24,49 @@
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
  * 
  * REVISION     DATE           NAME         DESCRIPTION  
- * 1.0          23-Dec-2025        Berlin        Initial Code  
+ * 1.0          30-Dec-2025        Berlin        Initial Code  
  * 
  * @author Berlin
  * @version 1.0
- * @since 23-Dec-2025
+ * @since 30-Dec-2025
  */
-package com.mylearnings.waits;
+package com.mylearnings.webdrivermethods;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ImplicitWait {
+public class GetWindowHandles {
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
-		System.out.println(driver.findElement(By.xpath("//input[@name='username']")).getAttribute("username"));
-		driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("admin123");
-		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
-		driver.quit  ();
-	}
+		driver.findElement(By.partialLinkText("OrangeHRM")).click();
+		Set<String> windowIds = driver.getWindowHandles();
+		List<String> Ids = new ArrayList<String>(windowIds);
+		String parentId = Ids.get(0);
+		String childId = Ids.get(1);
+		System.out.println("Parent ID : " + parentId + "\n" + "Child ID : " + childId);
+		driver.switchTo().window(childId);
+		System.out.println("Child Browser Window : " + driver.switchTo().window(childId).getTitle());
+		driver.switchTo().window(parentId);
+		System.out.println("Parent Browser Window : " + driver.switchTo().window(parentId).getTitle());
 
+		// 2nd approach
+		for (String WinIds : Ids) {
+			String title = driver.switchTo().window(WinIds).getTitle();
+			if (title.equals("Human Resources Management Software | HRMS | OrangeHRM")) {
+				// driver.switchTo().window(WinIds);
+				System.out.println(driver.getCurrentUrl());
+			} else {
+				System.out.println(driver.getCurrentUrl());
+			}
+		}
+	}
 }
