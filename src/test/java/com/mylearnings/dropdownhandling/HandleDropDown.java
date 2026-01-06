@@ -24,5 +24,8 @@ public class HandleDropDown {
 		for (int i = 0; i < options.size(); i++) {
 			System.out.println(options.get(i).getText());
 		}
+		for (WebElement DpDoptions : options) {
+			System.out.println(DpDoptions.getText());
+		}
 	}
 }
