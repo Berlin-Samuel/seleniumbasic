@@ -39,7 +39,6 @@ public class HandleHiddenDropDown {
 			
 			System.out.println("Number of options:"+ options.size()); //29
 			
-			
 			//printing options
 			for(WebElement op:options)
 			{
