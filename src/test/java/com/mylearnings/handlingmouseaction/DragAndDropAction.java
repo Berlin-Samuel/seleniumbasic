@@ -17,6 +17,8 @@ public class DragAndDropAction {
 		WebElement target = driver
 				.findElement(By.xpath("//div[@class='ui-widget-content']/ol[contains(@class,'field14 ')]"));
 		dandDElement.dragAndDrop(source, target).perform();
+		// System.out.println(source.getText() + " " + target.getAttribute("value"));
+		driver.quit();
 	}
 
 }
