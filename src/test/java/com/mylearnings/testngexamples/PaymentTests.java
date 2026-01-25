@@ -14,7 +14,4 @@ public class PaymentTests {
 
 	}
 
-	int ab = 123;
-	String a = "" + ab;
-
 }
