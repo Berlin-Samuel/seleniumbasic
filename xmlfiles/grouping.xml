@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+	<test name="Test">
+		<groups>
+			<run>
+				<include name="regression" />
+				<include name="sanity" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.mylearnings.testngexamples.LoginTests" />
+			<class name="com.mylearnings.testngexamples.SignUpTest" />
+			<class name="com.mylearnings.testngexamples.PaymentTests" />
+		</classes>
+	</test>
+</suite>

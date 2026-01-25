@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mylearnings.testngexamples.LoginPage">
+      <class name="com.mylearnings.testngexamples.DependencyMethods">
         <methods>
-          <include name="logoCheck"/>
-          <include name="logout"/>
+          <include name="openApp"/>
           <include name="login"/>
+          <include name="search"/>
         </methods>
-      </class> <!-- com.mylearnings.testngexamples.LoginPage -->
+      </class> <!-- com.mylearnings.testngexamples.DependencyMethods -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,49 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-25T13:03:06 IST" name="Suite" finished-at="2026-01-25T13:03:06 IST" duration-ms="45">
+  <suite started-at="2026-01-25T19:45:41 IST" name="Suite" finished-at="2026-01-25T19:45:41 IST" duration-ms="93">
     <groups>
+      <group name="regression">
+        <method signature="PaymentTests.paymentInRupees()[pri:1, instance:com.mylearnings.testngexamples.PaymentTests@397fbdb]" name="paymentInRupees" class="com.mylearnings.testngexamples.PaymentTests"/>
+        <method signature="SignUpTest.signUpBygmail()[pri:1, instance:com.mylearnings.testngexamples.SignUpTest@3590fc5b]" name="signUpBygmail" class="com.mylearnings.testngexamples.SignUpTest"/>
+        <method signature="PaymentTests.paymentInDollar()[pri:2, instance:com.mylearnings.testngexamples.PaymentTests@397fbdb]" name="paymentInDollar" class="com.mylearnings.testngexamples.PaymentTests"/>
+        <method signature="SignUpTest.signUpByFaceBook()[pri:2, instance:com.mylearnings.testngexamples.SignUpTest@3590fc5b]" name="signUpByFaceBook" class="com.mylearnings.testngexamples.SignUpTest"/>
+        <method signature="SignUpTest.signUpByTwitter()[pri:3, instance:com.mylearnings.testngexamples.SignUpTest@3590fc5b]" name="signUpByTwitter" class="com.mylearnings.testngexamples.SignUpTest"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="LoginTests.loginBygmail()[pri:1, instance:com.mylearnings.testngexamples.LoginTests@4802796d]" name="loginBygmail" class="com.mylearnings.testngexamples.LoginTests"/>
+        <method signature="PaymentTests.paymentInRupees()[pri:1, instance:com.mylearnings.testngexamples.PaymentTests@397fbdb]" name="paymentInRupees" class="com.mylearnings.testngexamples.PaymentTests"/>
+        <method signature="LoginTests.loginByFaceBook()[pri:2, instance:com.mylearnings.testngexamples.LoginTests@4802796d]" name="loginByFaceBook" class="com.mylearnings.testngexamples.LoginTests"/>
+        <method signature="PaymentTests.paymentInDollar()[pri:2, instance:com.mylearnings.testngexamples.PaymentTests@397fbdb]" name="paymentInDollar" class="com.mylearnings.testngexamples.PaymentTests"/>
+        <method signature="LoginTests.loginByTwitter()[pri:3, instance:com.mylearnings.testngexamples.LoginTests@4802796d]" name="loginByTwitter" class="com.mylearnings.testngexamples.LoginTests"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2026-01-25T13:03:06 IST" name="Test" finished-at="2026-01-25T13:03:06 IST" duration-ms="45">
-      <class name="com.mylearnings.testngexamples.AllAnnotations">
-        <test-method is-config="true" signature="bs()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="bs" finished-at="2026-01-25T13:03:06 IST" duration-ms="10" status="PASS">
+    <test started-at="2026-01-25T19:45:41 IST" name="Test" finished-at="2026-01-25T19:45:41 IST" duration-ms="93">
+      <class name="com.mylearnings.testngexamples.PaymentTests">
+        <test-method signature="paymentInRupees()[pri:1, instance:com.mylearnings.testngexamples.PaymentTests@397fbdb]" started-at="2026-01-25T19:45:41 IST" name="paymentInRupees" finished-at="2026-01-25T19:45:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bs -->
-        <test-method is-config="true" signature="bt()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="bt" finished-at="2026-01-25T13:03:06 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- paymentInRupees -->
+        <test-method signature="paymentInDollar()[pri:2, instance:com.mylearnings.testngexamples.PaymentTests@397fbdb]" started-at="2026-01-25T19:45:41 IST" name="paymentInDollar" finished-at="2026-01-25T19:45:41 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bt -->
-        <test-method is-config="true" signature="bc()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="bc" finished-at="2026-01-25T13:03:06 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- paymentInDollar -->
+      </class> <!-- com.mylearnings.testngexamples.PaymentTests -->
+      <class name="com.mylearnings.testngexamples.LoginTests">
+        <test-method signature="loginBygmail()[pri:1, instance:com.mylearnings.testngexamples.LoginTests@4802796d]" started-at="2026-01-25T19:45:41 IST" name="loginBygmail" finished-at="2026-01-25T19:45:41 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bc -->
-        <test-method is-config="true" signature="bm()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="bm" finished-at="2026-01-25T13:03:06 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- loginBygmail -->
+        <test-method signature="loginByFaceBook()[pri:2, instance:com.mylearnings.testngexamples.LoginTests@4802796d]" started-at="2026-01-25T19:45:41 IST" name="loginByFaceBook" finished-at="2026-01-25T19:45:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bm -->
-        <test-method signature="test()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="test" finished-at="2026-01-25T13:03:06 IST" duration-ms="7" status="PASS">
+        </test-method> <!-- loginByFaceBook -->
+        <test-method signature="loginByTwitter()[pri:3, instance:com.mylearnings.testngexamples.LoginTests@4802796d]" started-at="2026-01-25T19:45:41 IST" name="loginByTwitter" finished-at="2026-01-25T19:45:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="am()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="am" finished-at="2026-01-25T13:03:06 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- loginByTwitter -->
+      </class> <!-- com.mylearnings.testngexamples.LoginTests -->
+      <class name="com.mylearnings.testngexamples.SignUpTest">
+        <test-method signature="signUpBygmail()[pri:1, instance:com.mylearnings.testngexamples.SignUpTest@3590fc5b]" started-at="2026-01-25T19:45:41 IST" name="signUpBygmail" finished-at="2026-01-25T19:45:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- am -->
-        <test-method is-config="true" signature="ac()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="ac" finished-at="2026-01-25T13:03:06 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- signUpBygmail -->
+        <test-method signature="signUpByFaceBook()[pri:2, instance:com.mylearnings.testngexamples.SignUpTest@3590fc5b]" started-at="2026-01-25T19:45:41 IST" name="signUpByFaceBook" finished-at="2026-01-25T19:45:41 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ac -->
-        <test-method is-config="true" signature="at()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="at" finished-at="2026-01-25T13:03:06 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- signUpByFaceBook -->
+        <test-method signature="signUpByTwitter()[pri:3, instance:com.mylearnings.testngexamples.SignUpTest@3590fc5b]" started-at="2026-01-25T19:45:41 IST" name="signUpByTwitter" finished-at="2026-01-25T19:45:41 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- at -->
-        <test-method is-config="true" signature="as()[pri:0, instance:com.mylearnings.testngexamples.AllAnnotations@229f66ed]" started-at="2026-01-25T13:03:06 IST" name="as" finished-at="2026-01-25T13:03:06 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- as -->
-      </class> <!-- com.mylearnings.testngexamples.AllAnnotations -->
+        </test-method> <!-- signUpByTwitter -->
+      </class> <!-- com.mylearnings.testngexamples.SignUpTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
