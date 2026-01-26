@@ -7,7 +7,9 @@
         <methods>
           <include name="tearDown"/>
           <include name="testLogo"/>
+          <include name="testTitle"/>
           <include name="setup"/>
+          <include name="testURL"/>
         </methods>
       </class> <!-- com.mylearnings.testngdataproviders.ParamTest -->
     </classes>
