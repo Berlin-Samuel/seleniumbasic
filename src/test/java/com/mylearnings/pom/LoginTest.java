@@ -21,7 +21,9 @@ public class LoginTest {
 
 	@Test
 	void testLogin() {
-		LoginPage loginpage = new LoginPage(driver);
+		// LoginPage1 loginpage = new LoginPage1(driver);
+		LoginPage2 loginpage = new LoginPage2(driver);
+
 		loginpage.setUserName("Admin");
 		loginpage.setPassword("admin123");
 		loginpage.clickLogin();

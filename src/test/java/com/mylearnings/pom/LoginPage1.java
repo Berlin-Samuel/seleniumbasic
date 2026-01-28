@@ -3,11 +3,11 @@ package com.mylearnings.pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class LoginPage1 {
 	WebDriver driver;
 
 	// constructor
-	public LoginPage(WebDriver driver) {
+	public LoginPage1(WebDriver driver) {
 		this.driver = driver;
 	}
 
