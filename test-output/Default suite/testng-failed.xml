@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mylearnings.testngdataproviders.ParamTest">
+      <class name="com.mylearnings.testngdataproviders.TestListener">
         <methods>
-          <include name="tearDown"/>
-          <include name="testLogo"/>
           <include name="testTitle"/>
+          <include name="tearDown"/>
           <include name="setup"/>
           <include name="testURL"/>
         </methods>
-      </class> <!-- com.mylearnings.testngdataproviders.ParamTest -->
+      </class> <!-- com.mylearnings.testngdataproviders.TestListener -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

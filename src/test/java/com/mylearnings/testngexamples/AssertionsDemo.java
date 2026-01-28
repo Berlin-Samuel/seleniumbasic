@@ -15,6 +15,6 @@ public class AssertionsDemo {
 			System.out.println("Test Failed");
 			Assert.assertTrue(false);
 		}
-		//Assert.assertEquals(exp_title, actual_title);
+		Assert.assertEquals(exp_title, actual_title);
 	}
 }
