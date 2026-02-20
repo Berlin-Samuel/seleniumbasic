@@ -10,7 +10,6 @@ public class LoginPage1 {
 	public LoginPage1(WebDriver driver) {
 		this.driver = driver;
 	}
-
 	// Locators
 	By locate_username = By.xpath("//input[@name='username']");
 	By locate_password = By.xpath("//input[@name='password']");
